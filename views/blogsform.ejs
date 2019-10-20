@@ -1,0 +1,57 @@
+<%- include('partials/camp') %>
+
+<style>
+body
+{
+    background: #40bfc1;
+    color:black;
+}
+h1
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+.container
+{
+    margin-top:0px;
+    padding-top:20px;
+    background:#E8ECEF;
+    font-family: 'Titillium Web', sans-serif;
+    margin-left:300px;
+   margin-right:300px;
+   border-radius:12px
+}
+button
+{
+ font-size:13px;
+ background:green;
+color: white;
+ border:1px solid #E8ECEF;
+}
+</style>
+
+<center>
+<img src="/images/images.png" alt="" height="130px" width="520px">
+</center>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+<div class="container">
+<center>
+<h1> UNIVERSAL MEDICAL IDENTITY </h1>
+<div class="container">
+<form action="/blogs" method="POST">
+    <p>Patient Name</p>
+<input type="text" name="title">
+<p>Patient Image</p>
+<input type="text" name="url">
+<p>Enter your Symptoms</p>
+<textarea type="text" name="description"></textarea>
+<br>
+<br>
+<button>Submit</button>
+<br>
+<br>
+<br>
+</form>
+</center>
+</div>
+<%- include('partials/campf') %>

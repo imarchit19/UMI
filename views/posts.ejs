@@ -1,0 +1,7 @@
+<%include partials/header.ejs%>
+<%for(var i=0;i<books.length;i++){%>
+    <li>
+        <%=books[i].title%>-<strong><%=books[i].author%></strong>
+    </li>
+<%}%>
+<%include partials/footer.ejs %>

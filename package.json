@@ -1,8 +1,8 @@
 {
-  "name": "protofolio",
+  "name": "umi",
   "version": "1.0.0",
   "description": "this is a basic package",
-  "main": "hello.js",
+  "main": "app.js",
   "dependencies": {
     "Faker": "^0.7.2",
     "body-parser": "^1.19.0",
@@ -24,5 +24,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "prider",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imarchit19/UMI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imarchit19/UMI/issues"
+  },
+  "homepage": "https://github.com/imarchit19/UMI#readme"
 }

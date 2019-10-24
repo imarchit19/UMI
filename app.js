@@ -1,18 +1,17 @@
+//jshint esversion:6
 require('dotenv').config();
-var express = require("express");
-var app = express();
-var ejs = require('ejs');
-var socketio = require('socket.io')
+const express = require("express");
+const app = express();
 
-var methodOverride = require("method-override");
-var bodyparser = require("body-parser");
+const methodOverride = require("method-override");
+const bodyparser = require("body-parser");
 const md5 = require("md5");
 app.use(bodyparser.urlencoded({
   extended: true
 }));
 var mongoose = require("mongoose");
 app.use(methodOverride("_method"));
-app.use(express.static("public"))
+app.use(express.static("public"));
 mongoose.connect("mongodb://localhost:27017/blogsdb", {
   useNewUrlParser: true
 }, function (err) {
@@ -109,9 +108,9 @@ app.post("/blogs", function (req, res) {
   };
   employeedb.create(blogobj, function (err, newobj) {
     if (err) {
-      console.log(err)
+      console.log(err);
     } else {
-      res.redirect("/blogs")
+      res.redirect("/blogs");
     }
   });
 });
@@ -155,7 +154,7 @@ app.put("/blogs/:id", function (req, res) {
   };
   employeedb.findByIdAndUpdate(ide, blogobj1, function (err, updatedblog) {
     if (err) {
-      console.log(err)
+      console.log(err);
     } else {
       res.redirect("/blogs");
     }

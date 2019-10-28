@@ -13,9 +13,14 @@ var mongoose = require("mongoose");
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
 mongoose.connect("mongodb://localhost:27017/blogsdb", {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 }, function (err) {
-  console.log("mongoDB connected", err);
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("mongoDB connected");
+  }
 });
 var blogSchema = new mongoose.Schema({
   title: String,

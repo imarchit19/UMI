@@ -1,78 +1,79 @@
 <%- include('partials/camp') %>
 
 <style>
-mark
-{
-    color:gery;
-}
-h1
-{
-  font-size:52px;
-}
-button
-{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-body
-{
-    background: #40bfc1;
-}
-#del
-{
-    background: red;
-    color:white;
-    border:1px solid  #40bfc1;
-    font-size:20px;
-}
-#edi
-{
-    background:black;
-    color:white;
-    border:1px solid  #40bfc1;
-    font-size:20px;
-}
-button a
-{
-    color:white;
-    text-decoration: none;
-}
-.container1
-{
-    background:#E8ECEF;
-    margin-left:450px;
-    margin-right:450px;
-}
-spam
-{
-    font-weight: bolder;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-.image1{
-    border-radius: 120px;
-}
-p
-{
-    font-weight: bolder;
-    font-size:20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+    mark {
+        color: gery;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    button {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    body {
+        background: #40bfc1;
+    }
+
+    #del {
+        background: red;
+        color: white;
+        border: 1px solid #40bfc1;
+        font-size: 20px;
+    }
+
+    #edi {
+        background: black;
+        color: white;
+        border: 1px solid #40bfc1;
+        font-size: 20px;
+    }
+
+    button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .container1 {
+        background: #E8ECEF;
+        margin-left: 450px;
+        margin-right: 450px;
+    }
+
+    spam {
+        font-weight: bolder;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+
+    .image1 {
+        border-radius: 120px;
+    }
+
+    p {
+        font-weight: bolder;
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 </style>
- 
+
 
 <center>
-    <h1><mark style="background:gray"><spam><%=showblog["title"]%></spam></mark> Medical History</h1>
+    <h1><mark style="background:gray">
+            Medical History</h1>
     <br>
-<div class="container1">
+    <div class="container1">
         <p><img class="image1" src="<%=showblog["url"]%>" height="250px" width="300px">
-<p><%=showblog["description"] %></p>
-</div>
-<br>
-<br>
-<form action="/blogs/<%=showblog["_id"] %>?_method=DELETE" method="POST">
-    <button id="del">Delete</button>
-    <button id="edi"><a href="/blogs/<%=showblog["_id"]%>/edit">Edit</a></button>
-    <button id="edi"><a href="/blogs">Patient History</a></button>
+            <p><%=showblog["description"] %></p>
+    </div>
+    <br>
+    <br>
+    <form action="/blogs/<%=showblog["_id"] %>?_method=DELETE" method="POST">
+        <button id="del">Delete</button>
+        <button id="edi"><a href="/blogs/<%=showblog["_id"]%>/edit">Edit</a></button>
+        <button id="edi"><a href="/blogs">Patient History</a></button>
 
 </center>
 </form>

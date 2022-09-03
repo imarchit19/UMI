@@ -13,7 +13,7 @@
     "express": "^4.17.1",
     "md5": "^2.2.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.7.6",
+    "mongoose": "^5.13.15",
     "nexmo": "^2.5.1",
     "node-sms-send": "^0.1.3",
     "request": "^2.88.0",
